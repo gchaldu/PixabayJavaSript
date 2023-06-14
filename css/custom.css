@@ -1,0 +1,183 @@
+/* body {
+  background: #2C3E50;
+  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
+  background: linear-gradient(to right, #4CA1AF, #2C3E50); 
+} */
+body{
+  background-color: #bec8d4;
+}
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../img/montania.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 30rem;
+}
+
+.boton{
+  background-color: #2876a0;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+}
+.nav{
+  display: flex;
+  justify-content: end;
+  margin-right: 2rem;
+}
+.contenedor-boton{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  background-color: #2876a0;
+  color: white;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding: 0;
+}
+.contenedor-boton:hover
+{
+  background-color: #93adc4;
+  transition: all .6s ease;
+  
+}
+input[type="submit"]{
+  background-color: #2876a0;
+  color: white;
+  cursor: pointer;
+  padding: .8rem 4rem .8rem .8rem;
+
+}
+input[type="submit"]:focus {
+  outline: none;
+}
+input[type="submit"]:hover{
+  background-color: #93adc4;
+  transition: all .6s ease;
+}
+
+input[type='text']{
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+/*card**/
+
+.card {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 15rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.card-content p {
+  margin: 5px 0;
+  color: #777;
+}
+
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #337ab7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #23527c;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: center;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/*555555555555555555555*/
+
+
+
+.card-image {
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+/* Resto del código CSS del ejemplo anterior */
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image-container img {
+  transition: transform 0.3s ease;
+}
+
+.card-image-container:hover img {
+  transform: scale(1.1);
+}
