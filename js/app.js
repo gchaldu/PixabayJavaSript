@@ -78,40 +78,15 @@ function mostrarImagenes(imagenes, paginas ) {
     imagenes.forEach( imagen => {
 
         const { likes, views, previewURL, largeImageURL } = imagen;
-        resultado.innerHTML += /* `
-        <div class="card">
-                <div class="card-image">
-                <img src=${previewURL} alt="Descripción de la imagen">
-            </div>
-            <div class="card-content">
-                <h3>Título de la imagen</h3>
-                <p class="card-text">${likes} Me Gusta</p>
-                <p class="card-text">${views} Vistas </p>
-                <a href=${largeImageURL} class="button" target="_blank"></a>
-            </div>
-        </div>`;
-        `<div class="card">
-            <div class="card-image">
-            <img src=${previewURL} alt="Descripción de la imagen">
-            <div class="card-overlay">
-                <div class="card-overlay-content">
-                    <!-- Contenido adicional de la superposición -->
-                    <h3>Título de la imagen</h3>
-                    <p>${likes}</p>
-                    <p>${views}</p>
-                    <a href=${largeImageURL} class="button" target="_blank"></a>
-            </div>
-          </div>
-        </div>
-      </div>`; */
+        resultado.innerHTML += 
     `<div class="card">
         <a href=${largeImageURL} target="_blank">
             <div class="card-image-container">
                 <img src=${previewURL} alt="Descripción de la imagen">
                 <div class="overlay">
                     <div class="card-flex">
-                        <h2 class="card-like">${likes} <i class="fa-solid fa-heart"></i></h2>
-                        <h2 class="card-views">${views} <i class="fa-solid fa-eye"></i></h2>
+                        <h2 class="card-views-likes">${likes} <i class="fa-solid fa-heart"></i></h2>
+                        <h2 class="card-views-likes">${views} <i class="fa-solid fa-eye"></i></h2>
                     </div>
                 </div>
         </a>
@@ -139,7 +114,6 @@ function mostrarPaginacion() {
         botonSiguiente.href = "#";
         botonSiguiente.dataset.pagina = value;
         botonSiguiente.textContent = value;
-        botonSiguiente.classList.add('siguiente', 'bg-yellow-400', 'px-4', 'py-1', 'mr-2', 'mx-auto', 'mb-10', 'font-bold', 'uppercase', 'rounded');
         paginacionDiv.appendChild(botonSiguiente);
     }
 }

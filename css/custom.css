@@ -1,8 +1,3 @@
-/* body {
-  background: #2C3E50;
-  background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  
-  background: linear-gradient(to right, #4CA1AF, #2C3E50); 
-} */
 body{
   background-color: #bec8d4;
 }
@@ -11,11 +6,9 @@ body{
   flex-direction: column;
   justify-content: center;
   background-image: url(../img/montania.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-position:center;
   width: 100%;
-  height: 30rem;
+  height: 60vh;
 }
 
 .boton{
@@ -23,48 +16,26 @@ body{
   color: white;
   padding: 1rem 2rem;
   border-radius: .5rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+.boton-subir{
+  background-color: #2876a0;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
 }
 .nav{
   display: flex;
   justify-content: end;
   margin-right: 2rem;
 }
-.contenedor-boton{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  background-color: #2876a0;
-  color: white;
-  margin-top: 1rem;
-  cursor: pointer;
-  padding: 0;
-}
-.contenedor-boton:hover
+.boton:hover
 {
   background-color: #93adc4;
   transition: all .6s ease;
   
-}
-input[type="submit"]{
-  background-color: #2876a0;
-  color: white;
-  cursor: pointer;
-  padding: .8rem 4rem .8rem .8rem;
-
-}
-input[type="submit"]:focus {
-  outline: none;
-}
-input[type="submit"]:hover{
-  background-color: #93adc4;
-  transition: all .6s ease;
-}
-
-input[type='text']{
-  font-size: 1.5rem;
-  width: 100%;
 }
 
 /*card**/
@@ -89,10 +60,10 @@ input[type='text']{
 }
 .grid{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap:1rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -111,8 +82,8 @@ input[type='text']{
 
 .card-image-container img {
   transition: transform 0.3s ease;
-  width: 100vh;
-  height: 40vh;
+  width: 50vh;
+  height: 25vh;
   object-fit: cover;
 }
 
@@ -135,16 +106,7 @@ input[type='text']{
   opacity: 1;
 }
 
-.card-like {
-  position:relative;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-align: start;
-  padding: 1rem;
-}
-
-.card-views {
+.card-views-likes {
   position:relative;
   color: #fff;
   font-size: 1.2rem;
@@ -156,4 +118,109 @@ input[type='text']{
 .card-flex{
   display: flex;
   justify-content: space-between;
+}
+
+.grid-paginacion{
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  justify-items: center;
+  font-size: 1.5rem;
+  width: 100%;
+  color: white;
+  margin: 1.5rem;
+  gap:.3rem
+}
+.flex-paginacion{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.grid-paginacion a{
+  background-color:#23527c;
+  width: 100%;
+  text-align: center;
+}
+.grid-paginacion a:hover{
+  background-color: #93adc4;
+  transition: all .6s ease;
+}
+.buscador{
+  display: flex;
+  justify-content: center;
+}
+#formulario{
+  width: 90%;
+}
+@media(min-width: 480px)
+{
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header{
+    width: 100%;
+  height: 50vh;
+  }
+}
+@media(min-width: 768px)
+{
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-paginacion{
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+
+  }
+  .header{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+  }
+  #formulario{
+    width: 70%;
+  }
+}
+@media(min-width: 992px)
+{
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-paginacion{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .header{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+  }
+  #formulario{
+    width: 60%;
+  }
+}
+@media(min-width: 1200px)
+{
+  .header{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 30rem;
+  }
+  .grid-paginacion{
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+  }
+  .grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #formulario{
+    width: 40%;
+  }
 }
