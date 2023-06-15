@@ -69,36 +69,6 @@ input[type='text']{
 
 /*card**/
 
-.card {
-  width: 300px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card-image img {
-  width: 100%;
-  height: 15rem;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.card-content {
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.card-content h3 {
-  font-size: 18px;
-  margin: 0;
-  color: #333;
-}
-
-.card-content p {
-  margin: 5px 0;
-  color: #777;
-}
-
 .button {
   display: inline-block;
   padding: 8px 16px;
@@ -115,7 +85,6 @@ input[type='text']{
 .flex{
   display: flex;
   flex-direction: row;
-  width: 90%;
   justify-content: center;
 }
 .grid{
@@ -126,68 +95,11 @@ input[type='text']{
   margin-bottom: 3rem;
 }
 
-/*555555555555555555555*/
-
-
-
-.card-image {
-  position: relative;
-}
-
-.card-image img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.card-image:hover img {
-  transform: scale(1.1);
-}
-
-.card-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.card:hover .card-overlay {
-  opacity: 1;
-}
-
-.card-overlay-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-}
-
-/* Resto del código CSS del ejemplo anterior */
-.card-image-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-image-container img {
-  transition: transform 0.3s ease;
-}
-
-.card-image-container:hover img {
-  transform: scale(1.1);
-}
-
-
-/******/
-
 .card {
-  width: 300px;
-  height: 300px;
+  width: 21rem;
+  border-radius: .8rem;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border: 1px solid #ccc;
   position: relative;
 }
@@ -199,10 +111,13 @@ input[type='text']{
 
 .card-image-container img {
   transition: transform 0.3s ease;
+  width: 100vh;
+  height: 40vh;
+  object-fit: cover;
 }
 
 .card-image-container:hover img {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
 .overlay {
@@ -210,7 +125,7 @@ input[type='text']{
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -220,13 +135,25 @@ input[type='text']{
   opacity: 1;
 }
 
-.card-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.card-like {
+  position:relative;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.2rem;
   font-weight: bold;
-  text-align: center;
+  text-align: start;
+  padding: 1rem;
+}
+
+.card-views {
+  position:relative;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: start;
+  padding: 1rem;
+}
+
+.card-flex{
+  display: flex;
+  justify-content: space-between;
 }

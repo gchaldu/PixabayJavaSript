@@ -78,7 +78,7 @@ function mostrarImagenes(imagenes, paginas ) {
     imagenes.forEach( imagen => {
 
         const { likes, views, previewURL, largeImageURL } = imagen;
-        resultado.innerHTML += `
+        resultado.innerHTML += /* `
         <div class="card">
                 <div class="card-image">
                 <img src=${previewURL} alt="Descripción de la imagen">
@@ -103,22 +103,20 @@ function mostrarImagenes(imagenes, paginas ) {
             </div>
           </div>
         </div>
-      </div>`;
-        /**`
-            <div class="w-1/2 md:w-1/3 lg:w-1/4 mb-4 p-3">
-                <div class="bg-white ">
-                    <img class="w-full" src=${previewURL} alt={tags} />
-                    <div class="p-4">
-                        <p class="card-text">${likes} Me Gusta</p>
-                        <p class="card-text">${views} Vistas </p>
-        
-                        <a href=${largeImageURL} 
-                        rel="noopener noreferrer" 
-                        target="_blank" class="bg-blue-800 w-full p-1 block mt-5 rounded text-center font-bold uppercase hover:bg-blue-500 text-white">Ver Imagen</a>
+      </div>`; */
+    `<div class="card">
+        <a href=${largeImageURL} target="_blank">
+            <div class="card-image-container">
+                <img src=${previewURL} alt="Descripción de la imagen">
+                <div class="overlay">
+                    <div class="card-flex">
+                        <h2 class="card-like">${likes} <i class="fa-solid fa-heart"></i></h2>
+                        <h2 class="card-views">${views} <i class="fa-solid fa-eye"></i></h2>
                     </div>
                 </div>
-            </div>
-            `; */
+        </a>
+    </div>`
+        
     });
 
 
